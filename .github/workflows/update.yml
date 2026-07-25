@@ -1,0 +1,18 @@
+name: PowerShell Script Execution
+
+on:
+  schedule:
+    - cron: '* 0 * * *'  # Runs every midnight
+
+jobs:
+  run-powershell:
+    runs-on: ubuntu-latest  # Specify the OS for the runner
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2  # Check out the code from the repository
+
+      - name: Run PowerShell Script
+        shell: pwsh  # Use PowerShell Core
+        run: |
+          # Your PowerShell commands go here
+          Write-Host "Hello, World!"
