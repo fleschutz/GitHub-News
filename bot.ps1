@@ -14,8 +14,6 @@
 
 #requires -version 5.1
 
-param([string]$monthPattern = "2026-07-*", [string]$newPattern = "2026-07-23*")
-
 function WriteLine([string]$line) {
 	Write-Output $line >> README.md
 }
@@ -60,8 +58,13 @@ try {
 	Write-Host "⏳ (1/7) bot.ps1 started with parameters:       '$monthPattern' + '$newPattern'"
 	[system.threading.thread]::currentThread.currentCulture = [system.globalization.cultureInfo]"en-US"
 	Set-Culture -CultureInfo en-US
-	$weekday = Get-Date -UFormat "%A"
+	$year = Get-Date -UFormat "%Y"
+	$month = Get-Date -UFormat "%m"
 	$monthName = Get-Date -UFormat "%B"
+	$day = Get-Date -UFormat "%d"
+	$weekday = Get-Date -UFormat "%A"
+	$monthPattern = "$($year)-$($month)-*"
+	$newPattern = "$($year)-$($month)-$($day - 1)*"
 	
 	Write-Host "⏳ (2/7) Searching for Git executable...        " -noNewline
 	& git --version
