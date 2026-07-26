@@ -55,7 +55,6 @@ function Repo([string]$name, [string]$URLpart, [string]$versionPrefix) {
 }
 
 try {
-	Write-Host "⏳ (1/7) bot.ps1 started with parameters:       '$monthPattern' + '$newPattern'"
 	[system.threading.thread]::currentThread.currentCulture = [system.globalization.cultureInfo]"en-US"
 	Set-Culture -CultureInfo en-US
 	$year = Get-Date -UFormat "%Y"
@@ -65,6 +64,7 @@ try {
 	$weekday = Get-Date -UFormat "%A"
 	$monthPattern = "$($year)-$($month)-*"
 	$newPattern = "$($year)-$($month)-$($day - 1)*"
+	Write-Host "⏳ (1/7) bot.ps1 started with parameters:       '$monthPattern' + '$newPattern'"
 	
 	Write-Host "⏳ (2/7) Searching for Git executable...        " -noNewline
 	& git --version
