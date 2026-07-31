@@ -82,7 +82,7 @@ try {
 	[system.threading.thread]::currentthread.currentculture = [system.globalization.cultureinfo]"en-US"
 	$today = (Get-Date).ToShortDateString()
 	$global:numRepos = 0
-	Write-Output "📰 GitHub News on $weekday" > README.md
+	Write-Output "📰 GitHub News on $weekday" | Out-File README.md -encoding utf8
 	WriteLine    "=========================="
 	WriteLine ""
 
