@@ -55,6 +55,7 @@ function Repo([string]$name, [string]$URLpart, [string]$versionPrefix) {
 }
 
 try {
+	Write-Host "⏳ (1/8) bot.ps1 started on host:                $(hostname)"
 	[system.threading.thread]::currentThread.currentCulture = [system.globalization.cultureInfo]"en-US"
 	Set-Culture -CultureInfo en-US
 	$year = Get-Date -UFormat "%Y"
@@ -64,21 +65,21 @@ try {
 	$weekday = Get-Date -UFormat "%A"
 	$monthPattern = "$($year)-$($month)-*"
 	$newPattern = "$($year)-$($month)-$($day - 1)*"
-	Write-Host "⏳ (1/7) bot.ps1 started with parameters:       '$monthPattern' + '$newPattern'"
+	Write-Host "⏳ (2/8) Building start parameters:             '$monthPattern' + '$newPattern'"
 	
-	Write-Host "⏳ (2/7) Searching for Git executable...        " -noNewline
+	Write-Host "⏳ (3/8) Searching for Git executable...        " -noNewline
 	& git --version
 	if ($lastExitCode -ne 0) { throw "Can't execute 'git' - make sure Git is installed and available" }
 
-	Write-Host "⏳ (3/7) Searching for GitHub CLI executable... " -noNewline
+	Write-Host "⏳ (4/8) Searching for GitHub CLI executable... " -noNewline
 	& gh --version
 	if ($lastExitCode -ne 0) { throw "Can't execute 'gh --version' - make sure GitHub CLI is installed and available" }
 
-	Write-Host "⏳ (4/7) Pulling latest repo updates...         " -noNewline
+	Write-Host "⏳ (5/8) Pulling latest repo updates...         " -noNewline
 	& git pull
 	if ($lastExitCode -ne 0) { throw "Can't execute 'git pull' - make sure Git is installed and available" }
 
-	Write-Host "⏳ (5/7) Writing README.md by querying the GitHub repos: " -noNewline
+	Write-Host "⏳ (6/8) Writing README.md by querying the GitHub repos: " -noNewline
 	[system.threading.thread]::currentthread.currentculture = [system.globalization.cultureinfo]"en-US"
 	$today = (Get-Date).ToShortDateString()
 	$global:numRepos = 0
@@ -268,14 +269,14 @@ try {
 	WriteLine "**Updated:** *$today by our friendly 🤖 [bot script](bot.ps1) scanning $($global:numRepos) popular GitHub repositories*"
 	WriteLine ""
 
-	Write-Host "`n⏳ (6/7) Committing updated README.md..."
+	Write-Host "`n⏳ (7/8) Committing updated README.md..."
 	& git add README.md
 	if ($lastExitCode -ne 0) { throw "Executing 'git add README.md' failed with exit code $lastExitCode" }
 
 	& git commit -m "Updated README.md"
 	if ($lastExitCode -ne 0) { throw "Executing 'git commit' failed with exit code $lastExitCode" }
 
-	Write-Host "⏳ (7/7) Pushing updated README.md..."
+	Write-Host "⏳ (8/8) Pushing updated README.md..."
 	& git push
 	if ($lastExitCode -ne 0) { throw "Executing 'git push' failed with exit code $lastExitCode" }
 
