@@ -2,17 +2,15 @@ name: PowerShell Script Execution
 
 on:
   schedule:
-    - cron: '* 0 * * *'  # Runs every midnight
+    - cron: '* 0 * * *'  # <-- runs every midnight
 
 jobs:
   run-powershell:
-    runs-on: ubuntu-latest  # Specify the OS for the runner
+    runs-on: windows-latest  # <-- runs on Windows 11
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2  # Check out the code from the repository
+        uses: actions/checkout@v2  # <-- check out the code from the repository
 
       - name: Run PowerShell Script
-        shell: pwsh  # Use PowerShell Core
-        run: |
-          # Your PowerShell commands go here
-          Write-Host "Hello, World!"
+        shell: powershell
+        run: .\bot.ps1           # <-- exeecute the bot script
