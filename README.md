@@ -19,5 +19,5 @@ And last but not least **command-line** with [coreutils](https://github.com/core
 
 **Legend:** 🔥=*new release within 24h* • 🆕=*new release in August* • 🔖=*new tag in August*  • 💤=*idle for 90+ days*
 
-**Updated:** *8/5/2026 by our friendly 🤖 [bot script](bot.ps1) scanning 153 popular GitHub repositories*
+**Updated:** *8/5/2026 by our friendly 🤖 [bot script](bot.ps1) on [GitHub](https://github.com/fleschutz/GitHub-News) scanning 153 popular repositories*
 

@@ -266,7 +266,7 @@ try {
 	WriteLine ""
 	WriteLine "**Legend:** 🔥=*new release within 24h* • 🆕=*new release in $monthName* • 🔖=*new tag in $monthName*  • 💤=*idle for 90+ days*"
 	WriteLine ""
-	WriteLine "**Updated:** *$today by our friendly 🤖 [bot script](bot.ps1) scanning $($global:numRepos) popular GitHub repositories*"
+	WriteLine "**Updated:** *$today by our friendly 🤖 [bot script](bot.ps1) on [GitHub](https://github.com/fleschutz/GitHub-News) scanning $($global:numRepos) popular repositories*"
 	WriteLine ""
 
 	Write-Host "`n⏳ (7/8) Committing updated README.md..."
