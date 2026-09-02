@@ -4,12 +4,11 @@ on:
   schedule:
     - cron: '* 0 * * *'            # <-- runs every midnight
 
-env:
-  GH_TOKEN: ${{ github.token }}
-
 jobs:
   run-powershell:
     runs-on: windows-latest        # <-- runs on Windows 11
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2  # <-- checks out the code from the repository
