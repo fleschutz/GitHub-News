@@ -64,7 +64,7 @@ try {
 	$day = Get-Date -UFormat "%d"
 	$weekday = Get-Date -UFormat "%A"
 	$monthPattern = "$($year)-$($month)-*"
-	$newPattern = "$($year)-$($month)-$($day - 1)*"
+	$newPattern = "$($year)-$($month)-0$($day - 1)*"
 	Write-Host "⏳ (2/8) Building start parameters:             '$monthPattern' + '$newPattern'"
 	
 	Write-Host "⏳ (3/8) Searching for Git executable...        " -noNewline
