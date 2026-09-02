@@ -2,15 +2,18 @@ name: PowerShell Script Execution
 
 on:
   schedule:
-    - cron: '* 0 * * *'  # <-- runs every midnight
+    - cron: '* 0 * * *'            # <-- runs every midnight
+
+env:
+  GH_TOKEN: ${{ github.token }}
 
 jobs:
   run-powershell:
-    runs-on: windows-latest  # <-- runs on Windows 11
+    runs-on: windows-latest        # <-- runs on Windows 11
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2  # <-- checks out the code from the repository
 
       - name: Run PowerShell Script
         shell: powershell
-        run: .\bot.ps1           # <-- exeecutes the bot script
+        run: .\bot.ps1             # <-- exeecutes the bot script
