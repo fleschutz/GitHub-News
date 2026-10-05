@@ -1,5 +1,5 @@
-﻿📰 GitHub News on Monday
-==========================
+﻿📰 GitHub Repo News on Monday
+===============================
 
 Today in **featured repositories** the very latest releases are [bitchat](https://github.com/jackjackbits/bitchat) 1.7.1, [Bitcoin Core](https://github.com/bitcoin/bitcoin) 31.1, [copyparty](https://github.com/9001/copyparty) 1.20.24, [Flyby11](https://github.com/builtbybel/Flyby11) 3.03.100, [Home Assistant](https://github.com/home-assistant/core) 2026.9.4, [Hugo](https://github.com/gohugoio/hugo) 0.167.0, [Immich](https://github.com/immich-app/immich) 3.2.4, [Jellyfin](https://github.com/jellyfin/jellyfin) 12.1, [Kodi](https://github.com/xbmc/xbmc) 21.3-Omega, [Linux](https://github.com/torvalds/linux) 7.3-rc6🔖, [Mastodon](https://github.com/mastodon/mastodon) 4.7.3🆕, [Multipass](https://github.com/canonical/multipass) 1.16.4, [Nginx](https://github.com/nginx/nginx) 1.31.6, [OpenMCT](https://github.com/nasa/openmct) 4.3.1, [Pi-hole](https://github.com/pi-hole/pi-hole) 6.4.3, [Redis](https://github.com/redis/redis) 8.10.2, [WSL](https://github.com/microsoft/WSL) 3.0.1, [ZFS](https://github.com/openzfs/zfs) 2.4.4, [Zulip](https://github.com/zulip/zulip) 12.3, 
 
