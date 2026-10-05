@@ -19,5 +19,5 @@ And last but not least **command-line (CLI)** with [coreutils](https://github.co
 
 **Legend:** 🔥=*new release within 24h* • 🆕=*new release in October* • 🔖=*new tag in October*  • 💤=*idle for 90+ days*
 
-**Updated:** *10/5/2026 by our friendly 🤖 [bot script](https://github.com/fleschutz/GitHub-News/bot.ps1) scanning 154 popular GitHub repositories*
+**Updated:** *10/5/2026 by our friendly 🤖 [bot script](https://github.com/fleschutz/GitHub-News/blob/main/bot.ps1) scanning 154 popular GitHub repositories*
 
