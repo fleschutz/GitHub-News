@@ -201,7 +201,7 @@ try {
 	$ln += Repo "libgit2"            "libgit2/libgit2"         "v*"
 	$ln += Repo "libmodbus"          "stephane/libmodbus"      "v*"
 	$ln += Repo "librealsense"       "realsenseai/librealsense" "v*"
-	$ln += Repo "libSI"              "fleschutz/libSI"         ""
+	$ln += Repo "libSI"              "fleschutz/libSI"         "v*"
 	$ln += Repo "libyuv"             "lemenkov/libyuv"         ""
 	$ln += Repo "OpenClaw"           "openclaw/openclaw"       "v*"
 	$ln += Repo "OpenCV"             "opencv/opencv"           ""
