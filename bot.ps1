@@ -250,6 +250,7 @@ try {
 
 	 $ln = Repo "coreutils"          "coreutils/coreutils"   "v*"
 	$ln += Repo "curl"               "curl/curl"             "curl-*"
+	$ln += Repo "doxygen"            "doxygen/doxygen"       "Release_*"
 	$ln += Repo "fish"               "fish-shell/fish-shell" ""
 	$ln += Repo "git"                "git/git"               "v*"
 	$ln += Repo "gh"                 "cli/cli"               "v*"
