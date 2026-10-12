@@ -207,7 +207,7 @@ try {
 	$ln += Repo "OpenCV"             "opencv/opencv"           ""
 	$ln += Repo "OpenEXR"            "AcademySoftwareFoundation/openexr" "v*"
 	$ln += Repo "OpenVDB"            "AcademySoftwareFoundation/openvdb" "v*"
-	$ln += Repo "NVIDIA PhysX"       "NVIDIA-Omniverse/PhysX"  ""
+	$ln += Repo "NVIDIA PhysX"       "NVIDIA-Omniverse/PhysX"  "ovphysx-*"
 	$ln += Repo "Plog"               "SergiusTheBest/plog"     ""
 	$ln += Repo "SymCrypt"           "microsoft/SymCrypt"      "v*"
 	$ln += Repo "TensorFlow"         "tensorflow/tensorflow"   "v*"
