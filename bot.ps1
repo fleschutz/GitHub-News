@@ -112,7 +112,8 @@ try {
 	WriteLine "Today in **featured repositories** the very latest releases are $ln"
 	WriteLine ""
 
-	 $ln = Repo "Audacity"           "audacity/audacity"           "Audacity-*"
+	 $ln = Repo "7-Zip"              "ip7z/7zip"                   ""
+	$ln += Repo "Audacity"           "audacity/audacity"           "Audacity-*"
 	$ln += Repo "Blender"            "blender/blender"             "v*"
 	$ln += Repo "Brave"              "brave/brave-browser"         "v*"
 	$ln += Repo "Calibre"            "kovidgoyal/calibre"          "v*"
