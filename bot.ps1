@@ -263,7 +263,7 @@ try {
 	$ln += Repo "Rust coreutils"     "uutils/coreutils"      ""
 	$ln += Repo "smartmontools"      "smartmontools/smartmontools" "RELEASE_*"
 	$ln += Repo "winapp"             "microsoft/winappCLI"   "v*"
-	$ln += Repo "winget"             "microsoft/winget-cli"  "v*"
+	$ln += Repo "WinGet"             "microsoft/winget-cli"  "v*"
 	$ln += Repo "wget"               "mirror/wget"           ""
 	$ln += Repo "zsh"                "zsh-users/zsh"         "zsh-*"
 	WriteLine "And last but not least **command-line (CLI)** with $ln"
