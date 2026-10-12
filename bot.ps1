@@ -66,7 +66,7 @@ try {
 	$monthPattern = "$($year)-$($month)-*"
 	Write-Host "⏳20% Generating search pattern 'this month':  $monthPattern"
 
-	$newPattern = "$($year)-$($month)-0$($day - 1)*"
+	$newPattern = "$($year)-$($month)-$($day - 1)*"
 	Write-Host "⏳30% Generating search pattern 'yesterday':   $newPattern"
 	
 	Write-Host "⏳40% Searching for Git executable...          " -noNewline
