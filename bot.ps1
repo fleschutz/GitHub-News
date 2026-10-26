@@ -263,6 +263,7 @@ try {
 	$ln += Repo "PowerShell scripts" "fleschutz/PowerShell"  "v*"
 	$ln += Repo "Rust coreutils"     "uutils/coreutils"      ""
 	$ln += Repo "smartmontools"      "smartmontools/smartmontools" "RELEASE_*"
+	$ln += Repo "systemd"            "systemd/systemd"       "v*"
 	$ln += Repo "winapp"             "microsoft/winappCLI"   "v*"
 	$ln += Repo "WinGet"             "microsoft/winget-cli"  "v*"
 	$ln += Repo "wget"               "mirror/wget"           ""
