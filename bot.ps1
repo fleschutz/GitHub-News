@@ -109,7 +109,7 @@ try {
 	$ln += Repo "WSL"                "microsoft/WSL"               ""
 	$ln += Repo "ZFS"                "openzfs/zfs"                 "zfs-*"
 	$ln += Repo "Zulip"              "zulip/zulip"                 ""
-	WriteLine "Today in **featured repositories** the very latest releases are $ln"
+	WriteLine "Today in **featured repositories** the very latest releases in alphabetical order are $ln"
 	WriteLine ""
 
 	 $ln = Repo "7-Zip"              "ip7z/7zip"                   ""
