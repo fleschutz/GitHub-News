@@ -270,9 +270,9 @@ try {
 	$ln += Repo "zsh"                "zsh-users/zsh"         "zsh-*"
 	WriteLine "And last but not least **command-line (CLI)** with $ln"
 	WriteLine ""
-	WriteLine "**Legend:** 🔥=*new release within 24h* • 🆕=*new release in $monthName* • 🔖=*new tag in $monthName*  • 💤=*idle for 90+ days*"
+	WriteLine "**Legend:** 🔥=*new release within 24h*  🆕=*new release in $monthName*  🔖=*new tag in $monthName*   💤=*idle for 90+ days*"
 	WriteLine ""
-	WriteLine "**Updated:** *$today by our friendly 🤖 [bot script](https://github.com/fleschutz/GitHub-News/blob/main/bot.ps1) scanning $($global:numRepos) popular GitHub repositories*"
+	WriteLine "**Updated:** *$today by our friendly 🤖 [bot script](https://github.com/fleschutz/GitHub-News/blob/main/bot.ps1) scanning $($global:numRepos) popular GitHub repositories.*"
 	WriteLine ""
 
 	Write-Host "`n⏳80% Committing updated README.md..."

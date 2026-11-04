@@ -17,7 +17,7 @@ For **DevOps** it's [Ansible](https://github.com/ansible/ansible) 2.22.0🆕, [C
 
 And last but not least **command-line (CLI)** with [coreutils](https://github.com/coreutils/coreutils) 9.12, [curl](https://github.com/curl/curl) 8.23.0, [doxygen](https://github.com/doxygen/doxygen) 1.18.0, [fish](https://github.com/fish-shell/fish-shell) 4.9.3, [git](https://github.com/git/git) 2.56.0, [gh](https://github.com/cli/cli) 2.103.3, [Homebrew](https://github.com/Homebrew/brew) 7.0.12🆕, [kubo](https://github.com/ipfs/kubo) 0.43.1, [openssh](https://github.com/openssh/openssh-portable) 10.6.P1, [onefetch](https://github.com/o2sh/onefetch) 3.2.0, [ImageMagick](https://github.com/ImageMagick/ImageMagick) 7.1.2-35, [PowerShell](https://github.com/PowerShell/PowerShell) 7.6.9, [PowerShell scripts](https://github.com/fleschutz/PowerShell) 1.6, [Rust coreutils](https://github.com/uutils/coreutils) 0.12.0, [smartmontools](https://github.com/smartmontools/smartmontools) 7.5, [systemd](https://github.com/systemd/systemd) 262.1, [winapp](https://github.com/microsoft/winappCLI) 0.7.1, [WinGet](https://github.com/microsoft/winget-cli) 1.29.380, [wget](https://github.com/mirror/wget) 💤, [zsh](https://github.com/zsh-users/zsh) 5.9.2, 
 
-**Legend:** 🔥=*new release within 24h* • 🆕=*new release in November* • 🔖=*new tag in November*  • 💤=*idle for 90+ days*
+**Legend:** 🔥=*new release within 24h*  🆕=*new release in November*  🔖=*new tag in November*   💤=*idle for 90+ days*
 
-**Updated:** *11/4/2026 by our friendly 🤖 [bot script](https://github.com/fleschutz/GitHub-News/blob/main/bot.ps1) scanning 157 popular GitHub repositories*
+**Updated:** *11/4/2026 by our friendly 🤖 [bot script](https://github.com/fleschutz/GitHub-News/blob/main/bot.ps1) scanning 157 popular GitHub repositories.*
 
