@@ -37,7 +37,7 @@ function Repo([string]$name, [string]$URLpart, [string]$versionPrefix) {
 	}
 	$activity = (gh api /repos/$URLpart/activity?per_page=1 --method GET) | ConvertFrom-Json
 	if ($activity.Count -ge 1) {
-		if ("$($activity.timestamp)" -lt "2025-02") { return "[$name](https://github.com/$URLpart) $($version)💤, " }
+		if ("$($activity.timestamp)" -lt "2026-06") { return "[$name](https://github.com/$URLpart) $($version)💤, " }
 	}
 	$tags = (gh api /repos/$URLpart/tags?per_page=999 --method GET) | ConvertFrom-Json
 	if ($tags.Count -ge 1) {
@@ -66,7 +66,7 @@ try {
 	$monthPattern = "$($year)-$($month)-*"
 	Write-Host "⏳20% Generating search pattern 'this month':  $monthPattern"
 
-	$newPattern = "$($year)-$($month)-0$($day - 1)*"
+	$newPattern = "$($year)-$($month)-$($day - 1)*"
 	Write-Host "⏳30% Generating search pattern 'yesterday':   $newPattern"
 	
 	Write-Host "⏳40% Searching for Git executable...          " -noNewline
