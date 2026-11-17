@@ -55,7 +55,7 @@ function Repo([string]$name, [string]$URLpart, [string]$versionPrefix) {
 }
 
 try {
-	Write-Host "⏳10% bot.ps1 started on host:                 $(hostname)"
+	Write-Host "⏳10% bot.ps1 started on host...               $(hostname)"
 	[system.threading.thread]::currentThread.currentCulture = [system.globalization.cultureInfo]"en-US"
 	Set-Culture -CultureInfo en-US
 	$year = Get-Date -UFormat "%Y"
@@ -64,10 +64,10 @@ try {
 	$day = Get-Date -UFormat "%d"
 	$weekday = Get-Date -UFormat "%A"
 	$monthPattern = "$($year)-$($month)-*"
-	Write-Host "⏳20% Generating search pattern 'this month':  $monthPattern"
+	Write-Host "⏳20% Generating search pattern 'this month'...$monthPattern"
 
 	$newPattern = "$($year)-$($month)-$($day - 1)*"
-	Write-Host "⏳30% Generating search pattern 'yesterday':   $newPattern"
+	Write-Host "⏳30% Generating search pattern 'yesterday'... $newPattern"
 	
 	Write-Host "⏳40% Searching for Git executable...          " -noNewline
 	& git --version
@@ -81,7 +81,7 @@ try {
 	& git pull
 	if ($lastExitCode -ne 0) { throw "Can't execute 'git pull' - make sure Git is installed and available" }
 
-	Write-Host "⏳70% Querying GitHub and writing README.md:   " -noNewline
+	Write-Host "⏳70% Querying GitHub and writing README.md... " -noNewline
 	[system.threading.thread]::currentthread.currentculture = [system.globalization.cultureinfo]"en-US"
 	$today = (Get-Date).ToShortDateString()
 	$global:numRepos = 0
@@ -276,6 +276,8 @@ try {
 	WriteLine ""
 
 	Write-Host "`n⏳80% Committing updated README.md..."
+	& git config user.name  "Markus Fleschutz"
+	& git config user.email "markus.fleschutz@gmail.com"
 	& git add README.md
 	if ($lastExitCode -ne 0) { throw "Executing 'git add README.md' failed with exit code $lastExitCode" }
 
@@ -291,6 +293,6 @@ try {
 	Write-Host " succeeded (<Ctrl> <Click> to follow link)."
 	exit 0 # success
 } catch {
-	"⚠️ ERROR: $($Error[0]) (in script line $($_.InvocationInfo.ScriptLineNumber))"
+	"⚠️ ERROR: $($Error[0]) (at script line $($_.InvocationInfo.ScriptLineNumber))"
 	exit 1
 }
