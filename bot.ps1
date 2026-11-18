@@ -268,7 +268,7 @@ try {
 	$ln += Repo "WinGet"             "microsoft/winget-cli"  "v*"
 	$ln += Repo "wget"               "mirror/wget"           ""
 	$ln += Repo "zsh"                "zsh-users/zsh"         "zsh-*"
-	WriteLine "And last but not least **command-line (CLI)** with $ln"
+	WriteLine "And last but not least **command-line tools** with $ln"
 	WriteLine ""
 	WriteLine "**Legend:** 🔥=*new release within 24h*  🆕=*new release in $monthName*  🔖=*new tag in $monthName*   💤=*idle for 90+ days*"
 	WriteLine ""
