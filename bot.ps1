@@ -278,6 +278,8 @@ try {
 	Write-Host "`n⏳80% Committing updated README.md..."
 	& git config user.name  "Markus Fleschutz"
 	& git config user.email "markus.fleschutz@gmail.com"
+	if ($lastExitCode -ne 0) { throw "Executing 'git config' failed with exit code $lastExitCode" }
+
 	& git add README.md
 	if ($lastExitCode -ne 0) { throw "Executing 'git add README.md' failed with exit code $lastExitCode" }
 
@@ -286,6 +288,7 @@ try {
 
 	Write-Host "⏳90% Pushing updated README.md..."
 	& git push
+	& gh repo sync --force
 	if ($lastExitCode -ne 0) { throw "Executing 'git push' failed with exit code $lastExitCode" }
 
 	Write-Host "✅ Update of " -noNewline
